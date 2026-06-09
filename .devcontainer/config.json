@@ -16,7 +16,8 @@
         "xhttpSettings": {
           "mode": "packet-up",
           "path": "/"
-        }
+        },
+        "security": "tls"
       }
     }
   ],
