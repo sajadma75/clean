@@ -1,0 +1,23 @@
+{
+  "name": "dev-env",
+  "build": {
+    "dockerfile": "./Dockerfile",
+    "context": "."
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": false
+    }
+  },
+  "postAttachCommand": "bash -lc '/app/start.sh'",
+  "portsAttributes": {
+    "443": {
+      "label": "service",
+      "onAutoForward": "silent"
+    }
+  },
+  "forwardPorts": [443],
+  "hostRequirements": {
+    "cpus": 2
+  }
+}
