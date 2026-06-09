@@ -15,7 +15,7 @@ COPY config.json /etc/config.json
 
 RUN echo '#!/bin/bash' > /app/start.sh && \
     echo 'echo "Environment initialized."' >> /app/start.sh && \
-    echo 'echo "Xray core is starting..."' >> /app/start.sh && \
+    echo 'echo "Starting Xray core..."' >> /app/start.sh && \
     echo 'exec /usr/local/bin/core -c /etc/config.json' >> /app/start.sh && \
     chmod +x /app/start.sh
 
